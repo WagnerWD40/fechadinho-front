@@ -47,6 +47,12 @@ export const Container = styled.div<Props>`
         text-align: center;
         vertical-align: middle;
     }
+
+    & td:nth-child(2), & th:nth-child(2) {
+        text-align: center;
+        vertical-align: middle;
+        width: 180px;
+    }
 `;
 
 export const Icon = styled.img`

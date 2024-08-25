@@ -14,33 +14,34 @@ function Navbar({ campeaoQtd, conhecidoQtd, convidadoQtd, partidaQtd, handleChan
     return (
         <S.Navbar>
             <Button
-                variant='filled'
+                variant='outline'
                 rightSection={<ButtonValue value={partidaQtd} />}
                 onClick={() => handleChangeRoute(ROUTE.PARTIDA)}
                 color="violet">
                 Partidas
             </Button>            
             <Button
-                variant='filled'
+                variant='outline'
                 rightSection={<ButtonValue value={campeaoQtd} />}
                 onClick={() => handleChangeRoute(ROUTE.CAMPEAO)}
                 color="violet">
                 Campeões
             </Button>
             <Button
-                variant='filled'
+                variant='outline'
                 rightSection={<ButtonValue value={conhecidoQtd} />}
                 onClick={() => handleChangeRoute(ROUTE.CONHECIDO)}
                 color="violet">
                 Conhecidos
             </Button>
             <Button
-                variant='filled'
+                variant='outline'
                 rightSection={<ButtonValue value={convidadoQtd} />}
                 onClick={() => handleChangeRoute(ROUTE.CONVIDADO)}
                 color="violet">
                 Convidados
             </Button>
+
         </S.Navbar>
     );
 }

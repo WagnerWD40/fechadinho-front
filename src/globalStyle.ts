@@ -51,6 +51,13 @@ const GlobalStyle = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
+
+    :root {
+        --blue: #0066fe;
+        --light-blue: #00b8ff1f;
+        --red: #fe2f00eb;
+        --ligh-red: #ff000026;
+    }
 `;
  
 export default GlobalStyle;

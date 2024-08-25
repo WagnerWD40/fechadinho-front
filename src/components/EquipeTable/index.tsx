@@ -7,6 +7,8 @@ import Mid from '../../assets/Mid.webp';
 import ADC from '../../assets/ADC.webp';
 import Suporte from '../../assets/Suporte.webp';
 
+import { Utils } from "../../utils";
+
 import * as S from './styles';
 
 const rotaIconst: Record<string, any> = {
@@ -18,6 +20,8 @@ const rotaIconst: Record<string, any> = {
 } as const;
 
 function EquipeTable({ equipe }: { equipe?: Equipe }) {
+
+    
     return (
         <S.Container teamcolor={equipe?.side as TEAM}>
             <table width="100%">
@@ -26,11 +30,10 @@ function EquipeTable({ equipe }: { equipe?: Equipe }) {
                         <th>Campeao</th>
                         <th>Jogador</th>
                         <th>Rota</th>
-                        <th>K</th>
-                        <th>D</th>
-                        <th>A</th>
+                        <th>KDA</th>
                         <th>Dano causado</th>
                         <th>Dano recebido</th>
+                        <th>Gold</th>
                         <th>CS</th>
                     </tr>
                 </thead>
@@ -40,17 +43,15 @@ function EquipeTable({ equipe }: { equipe?: Equipe }) {
                             {/* <td><ChampionIcon campeao={pick.campeao} /></td> */}
                             <td>{pick.campeao.nome}</td>
                             <td>{pick.jogador.nickname}</td>
-                            {/* <td>{pick.rota.nome}</td> */}
                             <td>
                                 <S.RouteIconContainer>
                                     <img src={rotaIconst[pick.rota.nome]} width="20px"/>
                                 </S.RouteIconContainer>
                             </td>
-                            <td>{pick.abates}</td>
-                            <td>{pick.mortes}</td>
-                            <td>{pick.assistencias}</td>
-                            <td>{pick.danoCausado}</td>
-                            <td>{pick.danoRecebido}</td>
+                            <td>{`${pick.abates} / ${pick.mortes} / ${pick.assistencias}`}</td>
+                            <td>{Utils.formatNumber(pick.danoCausado)}</td>
+                            <td>{Utils.formatNumber(pick.danoRecebido)}</td>
+                            <td>{Utils.formatNumber(pick.gold)}</td>
                             <td>{pick.cs}</td>
                         </tr>)}
                 </tbody>

@@ -17,11 +17,12 @@ export const Navbar = styled.nav`
 `;
 
 export const ValueContainer = styled.div`
-    background-color: #FFF;
+    background-color: transparent;
     border-radius: 900px;
-    width: 24px;
-    height: 24px;
-    color: #212738;
+    border: 1px solid var(--mantine-color-violet-outline);
+    width: 28px;
+    height: 28px;
+    color: var(--mantine-color-violet-outline);
     font-size: 12px;
     display: flex;
     justify-content: center;

@@ -1,6 +1,7 @@
 import { TEAM } from '../../constants';
 import { Campeao, Conhecido, Convidado, Partida } from '../../models';
 import EquipeTable from '../EquipeTable';
+import Objetivos from '../Objetivos';
 
 import * as S from './styled';
 
@@ -48,7 +49,10 @@ export function CardPartida({ partida }: { partida: Partida }) {
             <S.Timestamp>data: <span>{data}</span> duração: <span>{duracao}</span></S.Timestamp>
             <S.TeamContainer>
                 <EquipeTable equipe={blueTeam} />
-                <S.Separador></S.Separador>
+                <S.Separador>
+                    <Objetivos equipe={blueTeam} />
+                    <Objetivos equipe={redTeam} />
+                </S.Separador>
                 <EquipeTable equipe={redTeam} />
             </S.TeamContainer>
         </S.Card>

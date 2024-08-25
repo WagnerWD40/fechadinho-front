@@ -37,6 +37,8 @@ export const Separador = styled.div`
     height: 60px;
     background-color: #FFF;
     margin: 0 8px;
+    display: flex;
+    justify-content: space-between;
 `;
 
 export const Avatar = styled.div`
