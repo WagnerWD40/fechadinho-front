@@ -49,7 +49,7 @@ export function ConhecidoDetalhes({ id, handleChangeRoute }: { id: number, handl
     return (
         <>    
         {conhecido && 
-            <ResourceContainer title={conhecido.nome}>
+            <ResourceContainer title={conhecido.nickname}>
                 <S.ActionContainer>
                     <Button
                         variant='outline'
