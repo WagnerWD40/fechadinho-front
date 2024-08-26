@@ -1,5 +1,5 @@
 import { TEAM } from "../../constants";
-import { Campeao, Equipe } from "../../models";
+import { Equipe } from "../../models";
 
 import Top from '../../assets/Top.webp';
 import Jungle from '../../assets/Jungle.webp';
@@ -10,6 +10,7 @@ import Suporte from '../../assets/Suporte.webp';
 import { Utils } from "../../utils";
 
 import * as S from './styles';
+import ChampionIcon from "../ChampionIcon";
 
 const rotaIconst: Record<string, any> = {
     Top,
@@ -19,7 +20,7 @@ const rotaIconst: Record<string, any> = {
     Suporte,
 } as const;
 
-function EquipeTable({ equipe }: { equipe?: Equipe }) {
+function EquipeTable({ equipe, vitoria }: { equipe?: Equipe, vitoria: boolean }) {
 
     
     return (
@@ -58,11 +59,6 @@ function EquipeTable({ equipe }: { equipe?: Equipe }) {
             </table>
         </S.Container>
     );
-}
-
-function ChampionIcon({ campeao }: { campeao: Campeao }) {
-    const baseUrl = 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/';
-    return <S.Icon src={`${baseUrl}${campeao.idRiot}.png`} />
 }
 
 export default EquipeTable;

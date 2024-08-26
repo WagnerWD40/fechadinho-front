@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Card = styled.div`
     background-color: var(--mantine-color-violet-filled);
+    width: 100%;
     border-radius: 8px;
     padding: 8px;
     box-shadow: 4px 4px 2px #00000011;
@@ -52,6 +53,23 @@ export const Avatar = styled.div`
 
 export const NameContainer = styled.div`
     text-align: center;
+`;
+
+export const PartidaHeader = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+`;
+
+export const VitoriaIndicator = styled.div<{ vitoriaTimeAzul: boolean }>`
+    padding: 8px 24px;
+    border-radius: 50px;
+    
+    background-color: ${p => p.vitoriaTimeAzul ? 'var(--blue)' : 'var(--red)'};
+    color: #FFF;
+    box-shadow: 2px 2px 2px #00000033;
 `;
 
 export const Timestamp = styled.div`

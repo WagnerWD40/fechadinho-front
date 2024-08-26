@@ -1,17 +1,18 @@
-export interface Campeao {
+export interface Entity {
     id: number;
+}
+
+export interface Campeao extends Entity {
     nome: string;
     idRiot: number;
 }
 
-export interface Rota {
-    id: number;
+export interface Rota extends Entity  {
     nome: string;
     url: string;
 }
 
-export interface Jogador {
-    id: number;
+export interface Jogador extends Entity  {
     nickname: string;
     rotaMain: Rota;
 }
@@ -24,6 +25,7 @@ export interface Conhecido extends Jogador {
 
 export interface Convidado extends Jogador {
     origemContato: string;
+    rankSolo: string;
 }
 
 export interface Pick {
@@ -50,8 +52,7 @@ export interface Equipe {
     inibidor: number;
 }
 
-export interface Partida {
-    id: number;
+export interface Partida extends Entity  {
     equipes: Equipe[];
     vitoriaTimeAzul: boolean;
     data: string;
