@@ -10,7 +10,7 @@ export function CardCampeao({ campeao, handleClick }: { campeao: Campeao, handle
     return (
         <S.CardAvatar onClick={handleClick}>
             <S.Avatar>
-                {/* <ChampionIcon campeao={campeao}/> */}
+                <ChampionIcon campeao={campeao} size={60}/>
             </S.Avatar>
             <S.NameContainer>{campeao.nome}</S.NameContainer>
         </S.CardAvatar>

@@ -29,7 +29,7 @@ export function CampeaoDetalhes({ id, handleChangeRoute }: { id: number, handleC
                 </S.ActionContainer>
                 <S.Container>
                     <S.Avatar size={100}>
-                        {/* <ChampionIcon campeao={campeao} size={100} /> */}
+                        <ChampionIcon campeao={campeao} size={100} />
                     </S.Avatar>
                     <S.Detalhes>
                         <Detalhe label="Id" value={campeao.id} />

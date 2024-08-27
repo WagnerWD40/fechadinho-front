@@ -41,8 +41,8 @@ function EquipeTable({ equipe, vitoria }: { equipe?: Equipe, vitoria: boolean })
                 <tbody>
                     {equipe?.picks.map(pick =>
                         <tr>
-                            {/* <td><ChampionIcon campeao={pick.campeao} /></td> */}
-                            <td>{pick.campeao.nome}</td>
+                            <td><ChampionIcon campeao={pick.campeao} /></td>
+                            {/* <td>{pick.campeao.nome}</td> */}
                             <td>{pick.jogador.nickname}</td>
                             <td>
                                 <S.RouteIconContainer>
